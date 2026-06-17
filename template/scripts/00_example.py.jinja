@@ -1,0 +1,8 @@
+"""Example analysis script."""
+
+import confusius  # noqa: F401 — registers the .fusi xarray accessor
+
+from {{ package_name }}.config import CONFIG
+
+print(CONFIG.paths.data_root)
+print(CONFIG.paths.results_root)

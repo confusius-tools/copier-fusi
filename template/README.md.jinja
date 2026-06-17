@@ -1,0 +1,46 @@
+# {{ project_name }}
+
+{{ description }}
+
+## Setup
+
+```bash
+uv sync
+uv run pre-commit install
+```
+
+Copy `config.toml` and update the paths for your machine:
+
+```bash
+cp config.toml config.local.toml  # optional: keep a local override
+```
+
+Edit `config.toml` to point `data_root` and `results_root` at the right locations.
+Add any project-specific paths to `[paths]` and wire them up in
+`src/{{ package_name }}/config.py`.
+
+## Project layout
+
+```
+src/{{ package_name }}/
+    config.py         # load_config() + CONFIG singleton
+    io/               # data loading
+    preprocessing/    # signal preprocessing
+    analysis/         # analysis functions
+scripts/              # numbered analysis scripts
+results/              # figures and outputs (not committed)
+```
+
+## Running scripts
+
+```bash
+uv run python scripts/00_example.py
+```
+
+## Tasks
+
+```bash
+just test    # run the test suite
+just lint    # ruff check + format
+just hooks   # install pre-commit hooks
+```

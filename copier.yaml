@@ -1,0 +1,42 @@
+_subdirectory: template
+
+project_name:
+  type: str
+  help: Human-readable project name (e.g. "fUSI-Photometry Comparison")
+
+project_slug:
+  type: str
+  help: Repository and directory name (e.g. "fusi-photometry")
+  default: "{{ project_name | lower | replace(' ', '-') | replace('_', '-') }}"
+
+package_name:
+  type: str
+  help: Python package name (e.g. "fusi_photometry")
+  default: "{{ project_slug | replace('-', '_') }}"
+
+description:
+  type: str
+  help: Short one-line project description
+
+author_name:
+  type: str
+  help: Your full name
+
+author_email:
+  type: str
+  help: Your email address
+
+python_version:
+  type: str
+  help: Python version to target (e.g. "3.13")
+  default: "3.13"
+
+data_root:
+  type: str
+  help: Path to the root data directory (can be changed later in config.toml)
+  default: "/data"
+
+results_root:
+  type: str
+  help: Path to the results directory (can be changed later in config.toml)
+  default: "./results"
