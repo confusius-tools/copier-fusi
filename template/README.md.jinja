@@ -12,12 +12,6 @@ git init
 uv run pre-commit install
 ```
 
-Copy `config.toml` and update the paths for your machine:
-
-```bash
-cp config.toml config.local.toml  # optional: keep a local override
-```
-
 Edit `config.toml` to point `data_root` and `results_root` at the right locations.
 The generated config uses grouped dataclasses: `PathsConfig` is one example section,
 and you can add new groups such as `PreprocessingConfig` or `AnalysisConfig` with
@@ -32,7 +26,7 @@ src/{{ package_name }}/
     preprocessing/    # signal preprocessing
     analysis/         # analysis functions
 scripts/              # numbered analysis scripts
-results/              # figures and outputs (not committed)
+results/              # figures and outputs (contents not committed)
 ```
 
 {% if include_docs %}

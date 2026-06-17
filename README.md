@@ -22,8 +22,8 @@ my-project/
 │   └── analysis/         # analysis functions
 ├── scripts/
 │   └── 00_example.py     # minimal script showing CONFIG import
-├── results/              # gitignored output directory
-├── config.toml           # local paths (not committed by collaborators)
+├── results/              # output directory; contents are not committed
+├── config.toml           # project configuration (paths, parameters, etc.)
 ├── pyproject.toml
 └── justfile
 ```

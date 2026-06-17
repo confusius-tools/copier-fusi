@@ -7,6 +7,8 @@ dist/
 .ruff_cache/
 .mypy_cache/
 site/
+results/*
+!results/.gitkeep
 *.zarr/
 *.hdf5
 *.h5
