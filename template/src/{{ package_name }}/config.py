@@ -9,7 +9,7 @@ from pathlib import Path
 class PathsConfig:
     """Paths to data and results directories.
 
-    TODO: Add project-specific path fields here and wire them up in load_config().
+    TODO: Add project-specific path fields here as needed.
     """
 
     data_root: Path
@@ -22,7 +22,11 @@ class PathsConfig:
 
 @dataclass
 class Config:
-    """Top-level configuration object."""
+    """Top-level configuration object.
+
+    Add new grouped config sections here as your project grows, for example
+    ``preprocessing: PreprocessingConfig`` or ``analysis: AnalysisConfig``.
+    """
 
     paths: PathsConfig
 

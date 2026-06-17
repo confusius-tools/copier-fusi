@@ -17,8 +17,9 @@ cp config.toml config.local.toml  # optional: keep a local override
 ```
 
 Edit `config.toml` to point `data_root` and `results_root` at the right locations.
-Add any project-specific paths to `[paths]` and wire them up in
-`src/{{ package_name }}/config.py`.
+The generated config uses grouped dataclasses: `PathsConfig` is one example section,
+and you can add new groups such as `PreprocessingConfig` or `AnalysisConfig` with
+matching TOML sections as your project grows.
 
 ## Project layout
 

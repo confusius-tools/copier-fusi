@@ -43,9 +43,10 @@ uvx copier update
 
 ## Extending the config
 
-Add project-specific fields to `PathsConfig` in `src/<package>/config.py` and the
-corresponding keys under `[paths]` in `config.toml`. The `load_config()` function in the
-same file is where you wire new fields up.
+The generated project uses grouped dataclasses for configuration. `PathsConfig` is just
+one example section. As your project grows, you can add new config groups such as
+`PreprocessingConfig` or `AnalysisConfig`, add matching sections to `config.toml`, and
+wire them into the top-level `Config` object in `src/<package>/config.py`.
 
 ## Documentation
 
