@@ -6,6 +6,7 @@ dist/
 .pytest_cache/
 .ruff_cache/
 .mypy_cache/
+site/
 *.zarr/
 *.hdf5
 *.h5

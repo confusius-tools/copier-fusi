@@ -7,6 +7,7 @@ Copier template for fUSI analysis projects using [ConfUSIus](https://github.com/
 ```bash
 uvx copier copy gh:sdiebolt/copier-fusi my-project
 cd my-project
+git init
 uv run pre-commit install
 ```
 
