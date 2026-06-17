@@ -1,6 +1,6 @@
 # copier-fusi
 
-Copier template for fUSI analysis projects using [ConfUSIus](https://github.com/confusius-tools/confusius).
+[Copier](https://copier.readthedocs.io/) template for fUSI analysis projects using [ConfUSIus](https://github.com/confusius-tools/confusius).
 
 ## Usage
 
