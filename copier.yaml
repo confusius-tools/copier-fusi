@@ -1,17 +1,21 @@
 _subdirectory: template
+_answers_file: .copier-answers.yml
+_exclude:
+  - "{% if not include_docs %}docs{% endif %}"
+  - "{% if not include_docs %}zensical.toml.jinja{% endif %}"
 
 project_name:
   type: str
-  help: Human-readable project name (e.g. "fUSI-Photometry Comparison")
+  help: Human-readable project name (e.g. "fUSI Analysis")
 
 project_slug:
   type: str
-  help: Repository and directory name (e.g. "fusi-photometry")
+  help: Repository and directory name (e.g. "my-fusi-analysis")
   default: "{{ project_name | lower | replace(' ', '-') | replace('_', '-') }}"
 
 package_name:
   type: str
-  help: Python package name (e.g. "fusi_photometry")
+  help: Python package name (e.g. "my_fusi_analysis")
   default: "{{ project_slug | replace('-', '_') }}"
 
 description:
@@ -40,3 +44,8 @@ results_root:
   type: str
   help: Path to the results directory (can be changed later in config.toml)
   default: "./results"
+
+include_docs:
+  type: bool
+  help: Include documentation setup (Zensical + mkdocstrings)?
+  default: false

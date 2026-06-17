@@ -1,9 +1,13 @@
-test:
-    uv run pytest
-
 lint:
     uvx ruff check src/ scripts/
     uvx ruff format --check src/ scripts/
 
 hooks:
     uv run pre-commit install
+{% if include_docs %}
+docs:
+    uv run zensical serve
+
+docs-build:
+    uv run zensical build
+{% endif %}

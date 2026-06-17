@@ -1,0 +1,44 @@
+[project]
+site_name = "{{ project_name }}"
+site_description = "{{ description }}"
+docs_dir = "docs"
+site_dir = "site"
+nav = [
+    { "Home" = "index.md" },
+]
+
+[project.theme]
+variant = "modern"
+language = "en"
+
+[project.plugins.mkdocstrings.handlers.python]
+paths = ["src"]
+
+[project.plugins.mkdocstrings.handlers.python.options]
+docstring_style = "numpy"
+docstring_section_style = "list"
+members_order = "alphabetical"
+show_source = false
+show_root_heading = true
+show_root_toc_entry = true
+show_root_full_path = false
+show_object_full_path = false
+show_if_no_docstring = false
+show_signature = true
+show_signature_annotations = true
+filters = ["!^_"]
+summary = true
+
+[project.markdown_extensions.admonition]
+
+[project.markdown_extensions.pymdownx.details]
+
+[project.markdown_extensions.pymdownx.superfences]
+
+[project.markdown_extensions.pymdownx.highlight]
+anchor_linenums = true
+
+[project.markdown_extensions.pymdownx.inlinehilite]
+
+[project.markdown_extensions.toc]
+permalink = true
